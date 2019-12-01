@@ -1,0 +1,36 @@
+{
+	"name": "xignsys-angular-i18n",
+	"displayName": "Angular i18n Extension",
+	"description": "Angular i18n support for Angular projects",
+	"version": "0.0.1",
+	"license": "UNLICENSED",
+	"publisher": "XignSys-GmbH",
+	"repository": "https://github.com/XignSys/vsc-angular-i18n.git",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"categories": [
+		"Other",
+		"Snippets"
+	],
+	"activationEvents": [],
+	"main": "dist/extension.js",
+	"contributes": {
+		"commands": []
+	},
+	"scripts": {
+		"build": "tsc -p ./",
+		"clean": "node tools/clean.js dist",
+		"publish:prepare": "npm run clean && npm run build",
+		"vscode:prepublish": "npm run publish:prepare",
+		"vscode:package": "vsce package"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.14",
+		"@types/vscode": "^1.40.0",
+		"rimraf": "^3.0.0",
+		"ts-node": "^8.5.4",
+		"tslint": "^5.20.1",
+		"typescript": "^3.7.2"
+	}
+}
